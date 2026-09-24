@@ -6,22 +6,32 @@ using UnityEngine.InputSystem;
 public class InputController : MonoBehaviour
 {
     InputAction moveAction;
+    InputAction shootAction;
 
     [HideInInspector] public Vector2 moveVector;
 
     void Awake()
     {
         moveAction = InputSystem.actions.FindAction("Move");
+        shootAction = InputSystem.actions.FindAction("Attack");
     }
 
     public void GetInput()
     {
         moveVector = moveAction.ReadValue<Vector2>();
     }
+    public void Shoot()
+    {
+        if (shootAction.WasPressedThisFrame())
+        {
+            GunController.Instance.Fire();
+        }
+    }
 
     void Update()
     {
         GetInput();
+        Shoot();
     }
 }
 
