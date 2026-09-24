@@ -3272,8 +3272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d36450c63491c84e8fb7cdadeed468a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  blood: {fileID: 0}
+  health: 10
+  blood: {fileID: 2934137050579825357, guid: 8ea98134188e7d349b2b821ff07638ce, type: 3}
 --- !u!54 &564445955
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4006,11 +4006,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e99307b09e25124e8f0b43866faa94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 0}
+  weapon: {fileID: 11400000, guid: fe6c628beedb23e4d8465598814e6be1, type: 2}
   raycastLayerMask:
     serializedVersion: 2
-    m_Bits: 0
-  audioSource: {fileID: 0}
+    m_Bits: 72
+  audioSource: {fileID: 1456027280}
+--- !u!1 &1746593768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1746593770}
+  - component: {fileID: 1746593769}
+  m_Layer: 0
+  m_Name: Enemy Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1746593769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746593768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcedb14d1bf92d24ab65de2465825453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRange: []
+--- !u!4 &1746593770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746593768}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.09674, y: -1.0235019, z: -20.889805}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4020,3 +4065,4 @@ SceneRoots:
   - {fileID: 1456027278}
   - {fileID: 11774515}
   - {fileID: 873990711}
+  - {fileID: 1746593770}
