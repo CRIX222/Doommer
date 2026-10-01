@@ -68,11 +68,6 @@ public class GunController : MonoBehaviour
                         Quaternion rot = Quaternion.LookRotation(-hit.normal);
                         enemy.Damage(weapon.damage, rot);
                     }
-
-                    if (hit.transform.gameObject.CompareTag("Test"))
-                    {
-                        Debug.Log("Explosion");
-                    }
                 }
             }
         }
