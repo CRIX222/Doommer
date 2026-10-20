@@ -24,6 +24,7 @@ public class EnemyAggro : MonoBehaviour
     void Update()
     {
         CheckEnemyAggro();
+        EnemyDamage();
     }
 
     public void CheckEnemyAggro()
